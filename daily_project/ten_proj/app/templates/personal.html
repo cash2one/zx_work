@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block workday_block %}
+  <p>
+    hhhhhhhhhhhhhhhhhh<br/>
+    uuuuuuuuuuuuuuuuuu<br/>
+    llllllllllllllllll<br/>
+  </p>
+    {% if result %}
+    <table class="table table-hover">
+    <thead>
+      <th>投票编号</th>
+      <th>投票名称</th>
+    </thead>
+    <tbody>
+      {% for dict_con in result %}
+      <tr>
+        <td>          {{dict_con.index}}        </td>
+        <td>          {{dict_con.name}}        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+
+    {%else%}
+    <p>hello</p>
+    {% endif %}
+{% endblock workday_block %}

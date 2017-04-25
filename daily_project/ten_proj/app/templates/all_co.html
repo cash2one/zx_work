@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content%}
+{# 首页所有运营单位的总积分趋势总和 #}
+<br/>
+<br/>
+<br/>
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <p class="panel-title">运营单位当月每日积分趋势图（显示2周）</p>
+    </div>
+    <div class="panel-body" style="width: 1100px;height:400px;" id="all_co_chart">
+      <script type="text/javascript">
+        var myChart;
+        // = echarts.init(document.getElementById('all_co_chart'));
+        // 指定图表的配置项和数据
+        var option = {
+        tooltip: {
+          trigger: 'axis'
+          },
+        legend: {
+          data:['广州','深圳','上海','东莞']
+          },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+          },
+        toolbox: {
+          feature: {
+            saveAsImage: {}
+            }
+          },
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: ['周一','周二','周三','周四','周五','周六','周日']
+         },
+        yAxis: {
+          type: 'value'
+          },
+        series: [
+          {
+          name:'广州',
+          type:'line',
+          stack: '总量',
+          data:[220, 182, 191, 234, 290, 330, 310]
+          },
+          {
+          name:'深圳',
+          type:'line',
+          stack: '总量',
+          data:[150, 232, 201, 154, 190, 330, 410]
+          },
+          {
+          name:'上海',
+          type:'line',
+          stack: '总量',
+          data:[320, 332, 301, 334, 390, 330, 320]
+          },
+          {
+          name:'东莞',
+          type:'line',
+          stack: '总量',
+          data:[820, 932, 901, 934, 1290, 1330, 1320]
+          },
+          ]
+        };
+        myChart = echarts.init(document.getElementById('all_co_chart'));
+        myChart.setOption(option);
+      </script>
+    </div>
+  </div>
+</div>
+{% endblock content %}

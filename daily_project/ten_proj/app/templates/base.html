@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>线索生态</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="http://cdn.staticfile.org/twitter-bootstrap/3.0.1/css/bootstrap.min.css"/>
+  <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.staticfile.org/twitter-bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <script src="static/echarts.js"></script>
+  <style type="text/css">
+    body{font-family: 微软雅黑}
+    footer{
+      color: black;
+      clear: both;
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs{
+        width: 160px;
+        margin-top: 60px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.067);
+    }
+
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: white;
+        background: black;
+        border: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/">线索生态</a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="index">广州</a></li>
+                  <li><a href="#上海">上海</a></li>
+                  <li><a href="#深圳">深圳</a></li>
+                  <li><a href="#东莞">东莞</a></li>
+                  <li><a href="#佛山">佛山</a></li>
+                  <li><a href="#苏州">苏州</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          {% block content%}
+          {% endblock content%}
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <hr/>
+  <footer>
+    <p align="center">资源中心</br></p>
+    <p align="center">联系我们：<a href="mailto:zhouxin03@sh.baidu.com">zhouxin03@baidu.com</a></p>
+  </footer>
+</body>
+</html>
